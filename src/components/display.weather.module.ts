@@ -3,6 +3,17 @@ import styled from 'styled-components'
 export const WeatherContainer = styled.div`
   height: 100vh;
   background: linear-gradient(to right, #a3f4a1, #c7ebb7);
+  position: relative;
+
+  .weatherLogo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .container {
     background-color: #ffffff7d;
     border-radius: 12px;
@@ -39,10 +50,11 @@ export const WeatherContainer = styled.div`
     width: 80%;
     background: transparent;
   }
+
   .weatherSearchCircle {
     border: 1px solid grey;
-    width: 30px; /* Adjust the width of the circle as needed */
-    height: 30px; /* Ensure the height matches the width for a perfect circle */
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;

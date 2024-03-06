@@ -1,9 +1,15 @@
 import { WeatherContainer } from './display.weather.module'
 import { AiOutlineSearch } from 'react-icons/ai'
+import WeatherAppLogo from '../img/weather-app-logo.png'
 
 const DisplayWeatherForecasts = () => {
   return (
     <WeatherContainer>
+      <img
+        src={WeatherAppLogo} // Use the imported image
+        alt="Weather App Logo"
+        className="weatherLogo"
+      />
       <div className="container">
         <div className="weatherSearchArea">
           <input type="text" placeholder="Enter a city" />
