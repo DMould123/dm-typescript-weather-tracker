@@ -11,6 +11,13 @@ const DisplayWeatherForecasts = () => {
         <div className="weatherSearchCircle">
           <AiOutlineSearch className="weatherSearchIcon" />
         </div>
+        <div className="weatherArea">
+          <h1>Stockholm</h1>
+          <span>SWE</span>
+          <div className="icon">icon</div>
+          <h1>18c</h1>
+          <h2>Rainy</h2>
+        </div>
       </div>
     </WeatherContainer>
   )

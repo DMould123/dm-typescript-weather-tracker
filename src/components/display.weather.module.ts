@@ -20,4 +20,38 @@ export const WeatherContainer = styled.div`
     flex-direction: column;
     position: absolute;
   }
+
+  .weatherSearchArea {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  .weatherSearchArea > input {
+    outline: none;
+    border: none;
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    background: transparent;
+  }
+  .weatherSearchCircle {
+    border: 1px solid grey;
+    width: 30px; /* Adjust the width of the circle as needed */
+    height: 30px; /* Ensure the height matches the width for a perfect circle */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    > .weatherSearchIcon {
+      font-size: 20px;
+      color: grey;
+    }
+  }
 `
