@@ -5,23 +5,23 @@ import WeatherAppLogo from '../img/weather-app-logo.png'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { WiHumidity } from 'react-icons/wi'
 import { SiWindicss } from 'react-icons/si'
+import { FaTemperatureLow, FaTemperatureHigh } from 'react-icons/fa'
 import WeatherDataProps from '../interfaces/WeatherDataProps'
 
 const DisplayWeatherForecasts = () => {
   const [city, setCity] = useState('')
   const [weatherData, setWeatherData] = useState<WeatherDataProps | null>(null)
-  const api_key = '41c11b042df6d8b40a8774324e646475'
-  const api_Endpoint = 'https://api.openweathermap.org/data/2.5/'
+  const apiKey = '41c11b042df6d8b40a8774324e646475'
+  const apiEndpoint = 'https://api.openweathermap.org/data/2.5/'
 
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `${api_Endpoint}weather?q=${city}&appid=${api_key}&units=metric`
+        `${apiEndpoint}weather?q=${city}&appid=${apiKey}&units=metric`
       )
       setWeatherData(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)
-      // Handle error gracefully, show a message to the user, etc.
     }
   }
 
@@ -29,7 +29,6 @@ const DisplayWeatherForecasts = () => {
     if (city.trim() !== '') {
       fetchData()
     } else {
-      // Handle empty city input, show a message to the user, etc.
     }
   }
 
@@ -58,9 +57,7 @@ const DisplayWeatherForecasts = () => {
             <div className="weatherArea">
               <h1>{weatherData.name}</h1>
               <span>{weatherData.sys.country}</span>
-              <div className="icon">{/* Render weather icon */}</div>
-              <h1>{weatherData.main.temp}°C</h1>
-              <h2>{weatherData.weather[0].description}</h2>
+              <div className="icon">icon</div>
             </div>
             <div className="lowerWeatherInfoArea">
               <div className="humidityLevel">
@@ -75,6 +72,21 @@ const DisplayWeatherForecasts = () => {
                 <div className="weatherInfo">
                   <h1>{weatherData.wind.speed}km/h</h1>
                   <p>Wind Speed: </p>
+                </div>
+              </div>
+              {/* New addition */}
+              <div className="temperatureSection">
+                <FaTemperatureLow className="weatherIcon" />
+                <div className="weatherInfo">
+                  <h1>{weatherData.main.temp_min}°C</h1>
+                  <p>Min Temperature: </p>
+                </div>
+              </div>
+              <div className="temperatureSection">
+                <FaTemperatureHigh className="weatherIcon" />
+                <div className="weatherInfo">
+                  <h1>{weatherData.main.temp_max}°C</h1>
+                  <p>Max Temperature: </p>
                 </div>
               </div>
             </div>

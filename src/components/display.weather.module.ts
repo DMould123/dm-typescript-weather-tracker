@@ -86,7 +86,7 @@ export const WeatherContainer = styled.div`
 
   .lowerWeatherInfoArea {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* Ensure items wrap to the next line */
     justify-content: space-around;
     font-family: 'Josefin Sans', sans-serif;
     margin: 20px;
@@ -100,14 +100,39 @@ export const WeatherContainer = styled.div`
   }
 
   .humidityLevel,
-  .windSection {
+  .windSection,
+  .temperatureSection {
+    /* Added temperatureSection */
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 0 20px;
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Make it square */
+    padding: 10px;
   }
 
   .weatherIcon {
     font-size: 4.5rem;
-    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .weatherDescription {
+    font-size: 1.5rem;
+    color: blue;
+    margin-top: 20px;
+  }
+
+  .weatherInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weatherInfo h1 {
+    margin-bottom: 5px;
+  }
+
+  .weatherInfo p {
+    font-size: 0.8rem;
   }
 `
