@@ -7,7 +7,7 @@ export const WeatherContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  .weather-container {
+  .container {
     background-color: #ffffff7d;
     border-radius: 12px;
     padding: 2rem;
@@ -107,7 +107,7 @@ export const WeatherContainer = styled.div`
   }
 
   .weatherIcon {
-    font-size: 3rem;
+    font-size: 4.5rem;
     margin-right: 10px;
   }
 `
