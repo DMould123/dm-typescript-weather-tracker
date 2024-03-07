@@ -135,6 +135,7 @@ export const WeatherContainer = styled.div`
   .weatherInfo p {
     font-size: 0.8rem;
   }
+
   .loading {
     height: 400px;
     width: 300px;
@@ -152,6 +153,11 @@ export const WeatherContainer = styled.div`
       font-size: 22px;
       margin-top: 10px;
       font-family: 'Josefin Sans', sans-serif;
+    }
+    .weatherDescription {
+      font-size: 16px;
+      color: #555;
+      margin-top: 5px;
     }
   }
 
