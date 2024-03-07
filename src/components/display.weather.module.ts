@@ -135,4 +135,32 @@ export const WeatherContainer = styled.div`
   .weatherInfo p {
     font-size: 0.8rem;
   }
+  .loading {
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    .loadingIcon {
+      font-size: 3rem;
+      animation: spin 2s linear infinite;
+    }
+    p {
+      font-size: 22px;
+      margin-top: 10px;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `
