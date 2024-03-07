@@ -11,8 +11,8 @@ import WeatherDataProps from '../interfaces/WeatherDataProps'
 const DisplayWeatherForecasts = () => {
   const [city, setCity] = useState('')
   const [weatherData, setWeatherData] = useState<WeatherDataProps | null>(null)
-  const apiKey = '41c11b042df6d8b40a8774324e646475'
-  const apiEndpoint = 'https://api.openweathermap.org/data/2.5/'
+  const apiKey = import.meta.env.VITE_APIKEY
+  const apiEndpoint = import.meta.env.VITE_APP_API_ENDPOINT
 
   const fetchData = async () => {
     try {
