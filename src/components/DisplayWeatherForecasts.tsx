@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 import { WeatherContainer } from './display.weather.module'
-import WeatherAppLogo from '../img/weather-app-logo.png'
-import { AiOutlineSearch } from 'react-icons/ai'
-import { WiHumidity } from 'react-icons/wi'
-import { SiWindicss } from 'react-icons/si'
-import { FaTemperatureLow, FaTemperatureHigh } from 'react-icons/fa'
+import WeatherSearchArea from './WeatherSearchArea'
+import WeatherDisplay from './WeatherDisplay'
+import Footer from './Footer'
 import {
   BsFillSunFill,
   BsCloudyFill,
@@ -13,17 +11,15 @@ import {
   BsCloudFog2Fill
 } from 'react-icons/bs'
 import { TiWeatherPartlySunny } from 'react-icons/ti'
-import { RiLoaderFill } from 'react-icons/ri'
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
-import linktreeIcon from '../img/linktree_logo_icon_247832.ico'
 import WeatherDataProps from '../interfaces/WeatherDataProps'
+import WeatherAppLogo from '../img/weather-app-logo.png'
 
-const DisplayWeatherForecasts = () => {
-  const [city, setCity] = useState('')
+const DisplayWeatherForecasts: React.FC = () => {
+  const [city, setCity] = useState<string>('')
   const [weatherData, setWeatherData] = useState<WeatherDataProps | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const apiKey = import.meta.env.VITE_APIKEY
-  const apiEndpoint = import.meta.env.VITE_APP_API_ENDPOINT
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const apiKey: string | undefined = import.meta.env.VITE_APIKEY
+  const apiEndpoint: string | undefined = import.meta.env.VITE_APP_API_ENDPOINT
 
   const fetchCurrentWeather = useCallback(
     async (lat: number, lon: number) => {
@@ -117,114 +113,17 @@ const DisplayWeatherForecasts = () => {
           alt="Weather App Logo"
           className="weatherLogo"
         />
-        <div className="weatherSearchArea">
-          <input
-            type="text"
-            placeholder="Enter a city"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-          <div className="weatherSearchCircle" onClick={handleSearch}>
-            <AiOutlineSearch className="weatherSearchIcon" />
-          </div>
-        </div>
-
-        {/* Render weather data if available and isLoading is false */}
-        {weatherData && !isLoading ? (
-          <>
-            <div className="weatherArea">
-              <h1>{weatherData.name}</h1>
-              <span>{weatherData.sys.country}</span>
-              <div className="icon">
-                {iconChanger(weatherData.weather[0].main)}
-              </div>
-              <p className="weatherDescription">
-                {weatherData.weather[0].description}
-              </p>
-            </div>
-            <div className="lowerWeatherInfoArea">
-              <div className="humidityLevel">
-                <WiHumidity className="weatherIcon" />
-                <div className="weatherInfo">
-                  <h1>{weatherData.main.humidity}%</h1>
-                  <p>Current Humidity: </p>
-                </div>
-              </div>
-              <div className="windSection">
-                <SiWindicss className="weatherIcon" />
-                <div className="weatherInfo">
-                  <h1>{weatherData.wind.speed}km/h</h1>
-                  <p>Wind Speed: </p>
-                </div>
-              </div>
-              {/* New addition */}
-              <div className="temperatureSection">
-                <FaTemperatureLow className="weatherIcon" />
-                <div className="weatherInfo">
-                  <h1>{weatherData.main.temp_min}°C</h1>
-                  <p>Min Temperature: </p>
-                </div>
-              </div>
-              <div className="temperatureSection">
-                <FaTemperatureHigh className="weatherIcon" />
-                <div className="weatherInfo">
-                  <h1>{weatherData.main.temp_max}°C</h1>
-                  <p>Max Temperature: </p>
-                </div>
-              </div>
-            </div>
-          </>
-        ) : (
-          // Render loading UI if isLoading is true or weather data is not available
-          <div className="loading">
-            <RiLoaderFill className="loadingIcon" />
-            <p>Loading</p>
-          </div>
-        )}
-
-        {/* Footer component */}
-        <footer className="footer">
-          <div className="footer-container">
-            <div className="social-links">
-              <a
-                href="https://www.linkedin.com/in/david-mould-b6731a21a/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href="https://github.com/DMould123"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub />
-              </a>
-              <a
-                href="https://twitter.com/DM12_51"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="your-linktree-url"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={linktreeIcon}
-                  alt="Linktree"
-                  className="social-icon"
-                  style={{ width: '24px', height: '24px' }}
-                />
-              </a>
-            </div>
-            <div className="copyright">
-              <p>David Mould 2024 ©</p>
-            </div>
-          </div>
-        </footer>
+        <WeatherSearchArea
+          city={city}
+          setCity={setCity}
+          handleSearch={handleSearch}
+        />
+        <WeatherDisplay
+          weatherData={weatherData}
+          isLoading={isLoading}
+          iconChanger={iconChanger}
+        />
+        <Footer />
       </div>
     </WeatherContainer>
   )

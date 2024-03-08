@@ -117,9 +117,25 @@ export const WeatherContainer = styled.div`
     margin-bottom: 10px;
   }
   .weatherDescription {
-    font-size: 1.5rem;
-    color: blue;
+    font-size: 2rem;
+    color: #333;
     margin-top: 20px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .weatherDescription span {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  }
+
+  .weatherDescription span:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
   }
 
   .weatherInfo {
