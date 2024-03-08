@@ -1,7 +1,8 @@
+import React from 'react'
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 import linktreeIcon from '../img/linktree_logo_icon_247832.ico'
 
-export function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -43,3 +44,5 @@ export function Footer() {
     </footer>
   )
 }
+
+export default Footer
