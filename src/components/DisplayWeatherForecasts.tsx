@@ -17,7 +17,6 @@ import { RiLoaderFill } from 'react-icons/ri'
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 import linktreeIcon from '../img/linktree_logo_icon_247832.ico'
 import WeatherDataProps from '../interfaces/WeatherDataProps'
-import styled from 'styled-components'
 
 const DisplayWeatherForecasts = () => {
   const [city, setCity] = useState('')
@@ -184,52 +183,50 @@ const DisplayWeatherForecasts = () => {
         )}
 
         {/* Footer component */}
-        <Footer />
+        <footer className="footer">
+          <div className="footer-container">
+            <div className="social-links">
+              <a
+                href="https://www.linkedin.com/in/david-mould-b6731a21a/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://github.com/DMould123"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://twitter.com/DM12_51"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="your-linktree-url"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={linktreeIcon}
+                  alt="Linktree"
+                  className="social-icon"
+                  style={{ width: '24px', height: '24px' }}
+                />
+              </a>
+            </div>
+            <div className="copyright">
+              <p>David Mould 2024 ©</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </WeatherContainer>
-  )
-}
-
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="social-links">
-          <a
-            href="https://www.linkedin.com/in/david-mould-b6731a21a/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/DMould123"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://twitter.com/DM12_51"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-          <a href="your-linktree-url" target="_blank" rel="noopener noreferrer">
-            <img
-              src={linktreeIcon}
-              alt="Linktree"
-              className="social-icon"
-              style={{ width: '24px', height: '24px' }}
-            />{' '}
-          </a>
-        </div>
-        <div className="copyright">
-          <p>David Mould 2024 ©</p>
-        </div>
-      </div>
-    </footer>
   )
 }
 
