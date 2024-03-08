@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const WeatherContainer = styled.div`
   height: 100vh;
-  background: linear-gradient(to right, #c7c7eb, #ccf2dd);
+  background: linear-gradient(to bottom, #667eea, #764ba2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,11 +11,13 @@ export const WeatherContainer = styled.div`
     background-color: #ffffff7d;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 80%;
+    margin: auto;
   }
 
   .weatherLogo {
@@ -28,6 +30,8 @@ export const WeatherContainer = styled.div`
     display: flex;
     align-items: center;
     margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
   }
 
   .weatherSearchArea > input {
@@ -36,8 +40,8 @@ export const WeatherContainer = styled.div`
     padding: 8px;
     border-radius: 20px;
     text-align: center;
-    width: 80%;
-    background: transparent;
+    flex: 1;
+    margin-right: 10px;
   }
 
   .weatherSearchCircle {
@@ -49,7 +53,6 @@ export const WeatherContainer = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-left: 10px;
   }
 
   .weatherSearchIcon {
@@ -86,7 +89,7 @@ export const WeatherContainer = styled.div`
 
   .lowerWeatherInfoArea {
     display: flex;
-    flex-wrap: wrap; /* Ensure items wrap to the next line */
+    flex-wrap: wrap;
     justify-content: space-around;
     font-family: 'Josefin Sans', sans-serif;
     margin: 20px;
@@ -102,13 +105,12 @@ export const WeatherContainer = styled.div`
   .humidityLevel,
   .windSection,
   .temperatureSection {
-    /* Added temperatureSection */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 20px;
-    width: 150px; /* Adjust width as needed */
-    height: 150px; /* Make it square */
+    width: 150px;
+    height: 150px;
     padding: 10px;
   }
 
@@ -116,8 +118,9 @@ export const WeatherContainer = styled.div`
     font-size: 4.5rem;
     margin-bottom: 10px;
   }
+
   .weatherDescription {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Smaller font size for description */
     color: #333;
     margin-top: 20px;
     text-align: center;
@@ -131,11 +134,11 @@ export const WeatherContainer = styled.div`
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-weight: bold;
-    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+    transition: background-color 0.3s ease;
   }
 
   .weatherDescription span:hover {
-    background-color: #e0e0e0; /* Change background color on hover */
+    background-color: #e0e0e0;
   }
 
   .weatherInfo {
@@ -183,6 +186,38 @@ export const WeatherContainer = styled.div`
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .weatherLogo {
+      width: 80px;
+    }
+    .weatherSearchArea {
+      flex-direction: column;
+    }
+    .weatherSearchArea > input {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .icon {
+      font-size: 4rem;
+    }
+    .weatherDescription {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .weatherLogo {
+      width: 90px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 90%;
     }
   }
 `
