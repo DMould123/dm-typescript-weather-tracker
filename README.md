@@ -28,35 +28,34 @@ This web application aims to:
 
 1. Clone the repository to your local machine:
 
-   ```bash
-   git clone https://github.com/DMould123/dm-typescript-weather-tracker.git
-   ```
-
-````
+```bash
+git clone https://github.com/DMould123/dm-typescript-weather-tracker.git
+```
 
 2. Navigate to the project directory:
 
-  ```bash
-  cd typescript-weather-app
-````
+```bash
+cd typescript-weather-app
+```
 
 3. Install the required dependencies:
 
-   ```bash
-   npm install
-   ```
-
-   ```bash
-   npm run dev
-   ```
+```bash
+npm install
+```
 
 4. Create a `.env` file in the root directory and add your API key for the OpenWeatherMap API:
 
 ```VITE_APIKEY=your_api_key_here
 VITE_APP_API_ENDPOINT=https://api.openweathermap.org/data/2.5/
 ```
+5. Run the app
 
-5. Open your web browser and visit http://localhost:5173 to access the TypeScript Weather app.
+```bash
+npm run dev
+```
+
+6. Open your web browser and visit http://localhost:5173 to access the TypeScript Weather app.
 
 ## Features ✨
 
