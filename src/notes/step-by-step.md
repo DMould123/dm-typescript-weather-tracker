@@ -16,7 +16,7 @@ cd typescript-weather-app
 Install Dependencies: Install the required dependencies:
 
 ```
-npm install
+npm install axios react-icons styled-components
 ```
 
 Run the Development Server: Start the development server to see the initial setup:
