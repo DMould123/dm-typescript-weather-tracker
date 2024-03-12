@@ -41,3 +41,22 @@ src/
 ├── App.tsx
 ├── index.css
 └── index.html
+
+## Components
+
+Step 1: Set Up App Component
+
+```
+import DisplayWeatherForecasts from './DisplayWeatherForecasts';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App" data-testid="app">
+      <DisplayWeatherForecasts />
+    </div>
+  );
+}
+
+export default App;
+```
