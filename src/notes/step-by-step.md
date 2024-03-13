@@ -60,3 +60,39 @@ function App() {
 
 export default App;
 ```
+
+### Simple Explanation
+
+- Initializes the main App component.
+- Imports DisplayWeatherForecasts component.
+- Renders DisplayWeatherForecasts component within a div.
+
+Step 2: Create DisplayWeatherForecasts Component
+
+```
+import React, { useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
+import WeatherSearchArea from './WeatherSearchArea';
+import WeatherDisplay from './WeatherDisplay';
+import Footer from './Footer';
+import { WeatherContainer } from './display.weather.module';
+import { TiWeatherPartlySunny } from 'react-icons/ti';
+import WeatherDataProps from '../interfaces/WeatherDataProps';
+import WeatherAppLogo from '../img/weather-app-logo.png';
+
+const DisplayWeatherForecasts: React.FC = () => {
+  // State variables declaration and initialization
+  // Fetch weather data functions
+  // Icon changer function
+  // useEffect for fetching weather data based on geolocation
+  // Return statement rendering WeatherContainer, WeatherSearchArea, WeatherDisplay, Footer
+}
+
+export default DisplayWeatherForecasts;
+
+```
+
+### Simple Explanation
+
+- Creates the DisplayWeatherForecasts component.
+- Implements state variables, fetch functions, and rendering logic for weather data display.
