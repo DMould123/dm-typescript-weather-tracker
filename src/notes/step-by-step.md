@@ -67,7 +67,7 @@ export default App;
 - Imports DisplayWeatherForecasts component.
 - Renders DisplayWeatherForecasts component within a div.
 
-Step 2: Create DisplayWeatherForecasts Component
+Step 2: Create the DisplayWeatherForecasts Component in `src/components/DisplayWeatherForecasts.tsx`
 
 ```
 import React, { useState, useEffect, useCallback } from 'react';
