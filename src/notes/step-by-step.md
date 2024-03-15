@@ -58,7 +58,7 @@ function App() {
   );
 }
 
-export default App;
+export default App
 ```
 
 ### Simple Explanation
@@ -88,7 +88,7 @@ const DisplayWeatherForecasts: React.FC = () => {
   // Return statement rendering WeatherContainer, WeatherSearchArea, WeatherDisplay, Footer
 }
 
-export default DisplayWeatherForecasts;
+export default DisplayWeatherForecasts
 ```
 
 ### Simple Explanation
@@ -115,7 +115,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({
   // Rendering weather data or loading indicator
 }
 
-export default WeatherDisplay;
+export default WeatherDisplay
 ```
 
 ### Simple Explanation
@@ -145,3 +145,21 @@ export default WeatherSearchArea;
 
 - Implements the WeatherSearchArea component for user input.
 - Allows users to input a city name and triggers a search when the search button is clicked.
+
+Step 5: Create the Footer Component in `src/components/Footer.tsx` (This step is optional!)
+
+```
+import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import linktreeIcon from '../img/linktree_logo_icon_247832.ico';
+
+const Footer: React.FC = () => {
+  // Renders social media links and Linktree icon
+}
+
+export default Footer
+```
+
+### Simple Explanation
+
+- Sets up the Footer component to display social media links and a Linktree icon.
+- Displays copyright information.
