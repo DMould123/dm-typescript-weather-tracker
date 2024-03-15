@@ -89,10 +89,59 @@ const DisplayWeatherForecasts: React.FC = () => {
 }
 
 export default DisplayWeatherForecasts;
-
 ```
 
 ### Simple Explanation
 
 - Creates the DisplayWeatherForecasts component.
 - Implements state variables, fetch functions, and rendering logic for weather data display.
+
+Step 3: Create the Create WeatherDisplay Component in `src/components/WeatherDisplay.tsx`
+
+```
+import WeatherDataProps from '../interfaces/WeatherDataProps';
+import { WiHumidity } from 'react-icons/wi';
+import { SiWindicss } from 'react-icons/si';
+import { FaTemperatureLow, FaTemperatureHigh } from 'react-icons/fa';
+import { RiLoaderFill } from 'react-icons/ri';
+
+interface WeatherDisplayProps {
+  // Prop types declaration
+}
+
+const WeatherDisplay: React.FC<WeatherDisplayProps> = ({
+  // Destructure props
+}) => {
+  // Rendering weather data or loading indicator
+}
+
+export default WeatherDisplay;
+```
+
+### Simple Explanation
+
+- Creates the DisplayWeatherForecasts component.
+- Implements state variables, fetch functions, and rendering logic for weather data display.
+
+Step 4: Create the WeatherSearchArea Component in `src/components/WeatherSearchArea.tsx`
+
+```
+import { AiOutlineSearch } from 'react-icons/ai';
+
+interface WeatherSearchProps {
+  // Prop types declaration
+}
+
+const WeatherSearchArea: React.FC<WeatherSearchProps> = ({
+  // Destructure props
+}) => {
+  // Renders a search input and button
+}
+
+export default WeatherSearchArea;
+```
+
+### Simple Explanation
+
+- Implements the WeatherSearchArea component for user input.
+- Allows users to input a city name and triggers a search when the search button is clicked.
