@@ -163,3 +163,36 @@ export default Footer
 
 - Sets up the Footer component to display social media links and a Linktree icon.
 - Displays copyright information.
+
+Step 6: Update WeatherDataProps Interface: in `src/interfaces/WeatherDataProps.ts`
+
+Select the information from the WeatherApi that you wish to display in the App.
+
+```
+interface WeatherDataProps {
+  name: string;
+  main: {
+    temp: number;
+    temp_min: number;
+    temp_max: number;
+    humidity: number;
+  };
+  sys: {
+    country: string;
+  };
+  weather: {
+    main: string;
+    description: string;
+  }[];
+  wind: {
+    speed: number;
+  };
+}
+
+export default WeatherDataProps
+```
+
+### Simple Explanation
+
+- Defines the structure of weather data received from the API.
+- Includes properties for location name, temperature, humidity, weather description, wind speed, etc.
