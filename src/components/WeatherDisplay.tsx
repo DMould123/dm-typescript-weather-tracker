@@ -32,28 +32,36 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({
           </div>
           <div className="lowerWeatherInfoArea">
             <div className="humidityLevel">
-              <WiHumidity className="weatherIcon" />
+              <WiHumidity className="weatherIcon" data-testid="humidity-icon" />
               <div className="weatherInfo">
                 <h1>{weatherData.main.humidity}%</h1>
                 <p>Current Humidity: </p>
               </div>
             </div>
             <div className="windSection">
-              <SiWindicss className="weatherIcon" />
+              <SiWindicss className="weatherIcon" data-testid="wind-icon" />
               <div className="weatherInfo">
                 <h1>{weatherData.wind.speed}km/h</h1>
                 <p>Wind Speed: </p>
               </div>
             </div>
+
             <div className="temperatureSection">
-              <FaTemperatureLow className="weatherIcon" />
+              <FaTemperatureLow
+                className="weatherIcon"
+                data-testid="min-temperature-icon"
+              />
               <div className="weatherInfo">
                 <h1>{weatherData.main.temp_min}°C</h1>
                 <p>Min Temperature: </p>
               </div>
             </div>
+
             <div className="temperatureSection">
-              <FaTemperatureHigh className="weatherIcon" />
+              <FaTemperatureHigh
+                className="weatherIcon"
+                data-testid="max-temperature-icon"
+              />
               <div className="weatherInfo">
                 <h1>{weatherData.main.temp_max}°C</h1>
                 <p>Max Temperature: </p>
