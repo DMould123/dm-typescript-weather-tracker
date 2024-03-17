@@ -1,5 +1,5 @@
 import React from 'react'
-import WeatherDataProps from '../interfaces/WeatherDataProps'
+import WeatherDataProps from '../../interfaces/WeatherDataProps'
 import { WiHumidity } from 'react-icons/wi'
 import { SiWindicss } from 'react-icons/si'
 import { FaTemperatureLow, FaTemperatureHigh } from 'react-icons/fa'

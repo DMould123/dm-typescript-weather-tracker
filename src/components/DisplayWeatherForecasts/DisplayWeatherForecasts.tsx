@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
-import { WeatherContainer } from './display.weather.module'
-import WeatherSearchArea from './WeatherSearchArea'
-import WeatherDisplay from './WeatherDisplay'
-import Footer from './Footer'
+import { WeatherContainer } from '../display.weather.module'
+import WeatherSearchArea from '../WeatherSearchArea/WeatherSearchArea'
+import WeatherDisplay from '../WeatherDisplay/WeatherDisplay'
+import Footer from '../Footer/Footer'
 import {
   BsFillSunFill,
   BsCloudyFill,
@@ -11,8 +11,8 @@ import {
   BsCloudFog2Fill
 } from 'react-icons/bs'
 import { TiWeatherPartlySunny } from 'react-icons/ti'
-import WeatherDataProps from '../interfaces/WeatherDataProps'
-import WeatherAppLogo from '../img/weather-app-logo.png'
+import WeatherDataProps from '../../interfaces/WeatherDataProps'
+import WeatherAppLogo from '../../img/weather-app-logo.png'
 
 const DisplayWeatherForecasts: React.FC = () => {
   const [city, setCity] = useState<string>('')

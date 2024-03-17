@@ -1,4 +1,4 @@
-import DisplayWeatherForecasts from './components/DisplayWeatherForecasts'
+import DisplayWeatherForecasts from './components/DisplayWeatherForecasts/DisplayWeatherForecasts'
 import './App.css'
 
 function App() {

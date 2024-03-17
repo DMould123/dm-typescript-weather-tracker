@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
-import linktreeIcon from '../img/linktree_logo_icon_247832.ico'
+import linktreeIcon from '../../img/linktree_logo_icon_247832.ico'
 
 const Footer: React.FC = () => {
   return (
