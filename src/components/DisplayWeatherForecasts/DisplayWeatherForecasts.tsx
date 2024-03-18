@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
-import { WeatherContainer } from '../display.weather.module'
+import { WeatherContainer } from '../../modules/display.weather.module'
 import WeatherSearchArea from '../WeatherSearchArea/WeatherSearchArea'
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay'
 import Footer from '../Footer/Footer'
