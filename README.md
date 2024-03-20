@@ -35,7 +35,7 @@ git clone https://github.com/DMould123/dm-typescript-weather-tracker.git
 2. Navigate to the project directory:
 
 ```bash
-cd typescript-weather-app
+cd dm-typescript-weather-tracker
 ```
 
 3. Install the required dependencies:
