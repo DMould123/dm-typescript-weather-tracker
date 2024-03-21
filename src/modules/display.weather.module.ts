@@ -221,3 +221,35 @@ export const WeatherContainer = styled.div`
     }
   }
 `
+export const FooterContainer = styled.div`
+  .footer {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 8px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-links a {
+    color: #000;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .social-links a:hover {
+    color: #764ba2;
+  }
+
+  .social-icon {
+    color: #000;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+`
