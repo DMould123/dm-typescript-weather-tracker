@@ -2,11 +2,11 @@
 
 ## Description 🌍
 
-This web application allows users to search for current weather conditions in various cities around the world. It provides real-time weather data, including temperature, humidity, wind speed, and a description of the weather condition.
+DM Weather App allows users to search for current weather conditions in various cities around the world. It provides real-time weather data, including temperature, humidity, wind speed, and a description of the weather condition.
 
 ## Objectives 🎯
 
-This web application aims to:
+DM Weather App aims to:
 
 - 🚀 Provide a seamless and enjoyable user experience for accessing weather information.
 - 🌟 Showcase proficiency in front-end development using React.js and styled-components.
