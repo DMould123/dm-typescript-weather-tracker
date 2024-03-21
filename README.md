@@ -15,7 +15,7 @@ DM Weather App aims to:
 - 💡 Demonstrate best practices in code organization, readability, and maintainability.
 - 🌱 Serve as a learning experience for continuous improvement and skill enhancement.
 
-## Tech Stack
+## Tech Stack 💻
 
 - React
 - Vite
@@ -24,7 +24,7 @@ DM Weather App aims to:
 - Styled Components
 - React.Icons
 
-## Installation & Steup
+## Installation & Steup 🔧
 
 1. Clone the repository to your local machine:
 
