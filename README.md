@@ -24,7 +24,7 @@ DM Weather App aims to:
 - Styled Components
 - React.Icons
 
-## Installation & Steup 🔧
+## Installation & Setup 🔧
 
 1. Clone the repository to your local machine:
 
@@ -49,6 +49,7 @@ npm install
 ```VITE_APIKEY=your_api_key_here
 VITE_APP_API_ENDPOINT=https://api.openweathermap.org/data/2.5/
 ```
+
 5. Run the app
 
 ```bash
