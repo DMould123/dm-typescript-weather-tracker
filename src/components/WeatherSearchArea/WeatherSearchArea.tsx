@@ -1,3 +1,4 @@
+import React from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 
 interface WeatherSearchProps {
@@ -20,7 +21,10 @@ const WeatherSearchArea: React.FC<WeatherSearchProps> = ({
         onChange={(e) => setCity(e.target.value)}
       />
       <div className="weatherSearchCircle" onClick={handleSearch}>
-        <AiOutlineSearch className="weatherSearchIcon" />
+        <AiOutlineSearch
+          className="weatherSearchIcon"
+          data-testid="weatherSearchIcon"
+        />
       </div>
     </div>
   )

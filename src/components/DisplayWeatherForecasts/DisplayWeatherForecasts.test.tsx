@@ -11,6 +11,4 @@ it('renders the DisplayWeatherForecasts component', () => {
   // Check if the weather logo is present
   const weatherLogo = screen.getByAltText('Weather App Logo')
   expect(weatherLogo).toBeInTheDocument()
-
-  // You can add more assertions as needed based on your component structure
 })
