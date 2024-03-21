@@ -11,7 +11,7 @@ DM Weather App aims to:
 - 🚀 Provide a seamless and enjoyable user experience for accessing weather information.
 - 🌟 Showcase proficiency in front-end development using React.js and styled-components.
 - 🛠️ Utilize modern web technologies to create a responsive and visually appealing design.
-- 📊 Integrate real-time weather data from the OpenWeatherMap API.
+- 📊 Integrate real-time weather data from the OpenWeatherMap API via Axios.
 - 💡 Demonstrate best practices in code organization, readability, and maintainability.
 - 🌱 Serve as a learning experience for continuous improvement and skill enhancement.
 
